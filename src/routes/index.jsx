@@ -1,20 +1,19 @@
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // componentes y vistas
-
+import Home from "../views/Home";
+import NavBar from '../components/Navbar'
 const Routes = () => {
-    return(
-        <BrowserRouter>
-            <Navbar/>
-
-            <Switch>
-                <Route exact path="/">
-                    <h1>entrando a mi app</h1>
-                </Route>               
-            </Switch>
-            
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>
+      <NavBar/>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default Routes;
