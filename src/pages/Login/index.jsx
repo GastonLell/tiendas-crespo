@@ -1,52 +1,55 @@
 import "./styles.css";
 
+import { useState } from "react";
+
+import { createUser } from '../../firebase/client';
+
 const Login = () => {
+
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleChangueInput = (e) => {
+    e.preventDefault();
+    setUser({...user,
+      [e.target.name]: e.target.value
+    })
+  };
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    createUser(user);
+    
+  }
   return (
     <div className="container-login">
       <h2>Iniciar sesión</h2>
-      <form className="wrapper">
+      <form onSubmit={handleSubmitForm} className="wrapper">
         <div className="input-data">
-          <input name="name"type="text" required autoComplete="off" />
+          <input
+            name="email"
+            type="text"
+            required
+            autoComplete="off"
+            onChange={handleChangueInput}
+          />
           <div className="underline"></div>
-          <label htmlFor="name">E-mail</label>
+          <label htmlFor="email">E-mail</label>
         </div>
         <div className="input-data">
-          <input name="contraseña"type="text" required autoComplete="off" />
+          <input
+            name="password"
+            type="password"
+            required
+            autoComplete="off"
+            onChange={handleChangueInput}
+          />
           <div className="underline"></div>
-          <label htmlFor="contraseña">Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
         </div>
-
+        <button>Registrarme</button>
       </form>
-
-
-
-
-
-      {/* <div className="form-log-in">
-        <h3>¡Hola! Ingresa tu email y contraseña!</h3>
-
-        <form>
-          <div className="form-group">
-            <label className="label-name" htmlFor="email">
-              Ingrese su email
-            </label>
-            <input type="email" name="email" autoComplete="off" required />
-          </div>
-
-          <div className="form-group">
-            <label className="label-name" htmlFor="contraseña">
-              Ingrese su contraseña
-            </label>
-            <input
-              type="password"
-              name="contraseña"
-              autoComplete="off"
-              required
-            />
-          </div>
-          <button>Ingresar</button>
-        </form>
-      </div> */}
     </div>
   );
 };

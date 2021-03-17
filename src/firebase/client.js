@@ -21,3 +21,9 @@ const app = firebase.initializeApp(firebaseConfig);
 export const getFirebase = () => app;
 
 export const getFirestore = () => firebase.firestore(app);
+
+export const createUser = ({email, password}) => {
+	firebase.auth().createUserWithEmailAndPassword(email, password)
+	.then(user => console.log(user))
+	.catch(err => console.log(err))
+}
