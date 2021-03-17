@@ -1,4 +1,4 @@
-import Routes from './routes';
+import Router from './Router';
 import reducer from './reducer';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="App">
       <Provider store={store}>
-        <Routes/>
+        <Router/>
       </Provider>
     </div>
   );

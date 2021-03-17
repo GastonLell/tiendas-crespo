@@ -1,16 +1,15 @@
-import { NavLink } from "react-router-dom";
-
+import { NavLink, Link } from "react-router-dom";
 import "./styles.css";
+import { BiLogIn } from "react-icons/bi";
 
-import Seeker from "../Seeker";
 
 const NavBar = () => {
   return (
     <nav>
-      <h1>Crespo tiendas</h1>
+      
+      <Link to="/" className="logo-marca" >Crespo tiendas</Link>
 
       <div className="group-nav">
-        <Seeker />
 
         <ul>
           <li>
@@ -19,7 +18,7 @@ const NavBar = () => {
               activeClassName="active-item-nav"
               to="/inicio"
             >
-              INICIO
+              Inicio
             </NavLink>
           </li>
           <li>
@@ -28,11 +27,26 @@ const NavBar = () => {
               activeClassName="active-item-nav"
               to="/me"
             >
-              MI PERFIL
+              Tiendas
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className="item-nav"
+              activeClassName="active-item-nav"
+              to="/me"
+            >
+              Servicios
+            </NavLink>
+          </li>
+          
         </ul>
       </div>
+      
+      <Link to="/login" className="log-in" >
+        <BiLogIn />
+      </Link>
+      
     </nav>
   );
 };

@@ -1,5 +1,11 @@
+//importar app firebase
 import firebase from "firebase/app";
 
+//importar servicios
+import "firebase/auth";
+import "firebase/firestore";
+
+//configuracion app firebase
 const firebaseConfig = {
 	apiKey: "AIzaSyAnP5WmeSdov4ij6IBEzbtNCKYgNVppbc0",
 	authDomain: "crespo-tiendas-servicios.firebaseapp.com",
@@ -9,8 +15,9 @@ const firebaseConfig = {
 	appId: "1:973486025624:web:a1d070eeef68d46ebf59ed"
 }
 
+//funcion inicia firebase
 const app = firebase.initializeApp(firebaseConfig);
 
 export const getFirebase = () => app;
 
-app ? console.log("conectado") : console.log("error");
+export const getFirestore = () => firebase.firestore(app);
