@@ -7,20 +7,24 @@
 }
 .logo-marca{
     width: 30%;
-    color: var(--COLOR_CUATRO);
+    color: #fff;
     padding-left: 10px;
     font-size: 45px;
     text-decoration: none;
 }
 
 nav{
+    z-index: 1;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--COLOR_UNO);
+    background: linear-gradient(-50deg, rgb(70, 70, 92), var(--COLOR_UNO));
     width: 100%;
     height: auto;
     padding: 15px;
+    margin-bottom: 20px;
 }
 nav ul{
     display: flex;
@@ -32,7 +36,7 @@ nav ul li{
 
 nav .item-nav{
     font-size: 20px;
-    color: #fff;
+    color: var(--COLOR_CUATRO);
     text-decoration: none;
     padding: 10px;
 }

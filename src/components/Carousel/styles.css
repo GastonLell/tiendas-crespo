@@ -1,6 +1,18 @@
+.img-container{
+    text-align: center;
+}
 
 .img-carrousel img{
     margin: 0 auto;
     display: block;
+}
+
+.button-carousel{
+    text-align: center;
+    width: 50;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
 
 }

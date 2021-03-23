@@ -1,0 +1,54 @@
+@import "../../utilidades/stylesGeneral.css";
+
+.container-tienda{
+    background-color: #fff;
+    width: 80%;
+    padding-top: 25px;
+    margin: 25px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px #999, 3px 3px 4px #999, 4px 4px 5px #999, 5px 5px 6px #999;
+}
+
+.header-tienda h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 60%;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    border: 1px solid var(--COLOR_CUATRO);
+    border-radius: 20px;
+}
+
+.body-tienda{
+    background-color: #fff;   
+}
+
+.container-description{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 40px 25px 60px 25px;
+    font-size: 20px;
+}
+
+.redes-container a{
+    margin: 10px 10px;
+    text-decoration: none;
+    color: var(--COLOR_UNO);
+    font-size: 50px;
+}
+.contacto-grupo{
+    width: 83%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.contacto-grupo h4{
+    display: none;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgb(114, 101, 101);
+}
+.contacto-grupo:hover h4{
+    display: inline-block;
+}

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // vistas
 import Login from "./pages/Login";
 import Home from "./pages/Home/Home";
-import Tiendas from "./pages/Tiendas";
+import StoresPage from "./pages/StoresPage";
 import Servicios from "./pages/Servicios";
 
 // componentes generales
@@ -20,7 +20,7 @@ const Router = () => {
         <Route exact path="/login" component={Login} />
       </Switch>
       <Switch>
-        <Route exact path="/tiendas" component={Tiendas} />
+        <Route exact path="/stores" component={StoresPage} />
       </Switch>
       <Switch>
         <Route exact path="/servicios" component={Servicios} />

@@ -1,3 +1,4 @@
+import './app.css'
 import Router from './Router';
 import reducer from './reducer';
 import {createStore} from 'redux';

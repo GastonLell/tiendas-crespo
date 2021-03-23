@@ -1,0 +1,9 @@
+.modal-container{
+    padding: 50px;
+    width: 95%;
+    height: 90vh;
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    background-color: #333;
+}

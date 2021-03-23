@@ -16,20 +16,21 @@ const ImageCarousel = () => (
     naturalSlideHeight={0.33}
     totalSlides={3}
   >
-    <Slider>
-      <Slide className="img-carrousel" index={0}>
-        <img src="https://via.placeholder.com/500/0000FF/808080" />
-      </Slide>
-      <Slide className="img-carrousel" tag="a" index={1}>
-        <img src="https://via.placeholder.com/500/FF0000/FFFFFF" />
-      </Slide>
-      <Slide className="img-carrousel" tag="a" index={2}>
-        <img src="https://via.placeholder.com/500/0000FF/808080" />
-      </Slide>
-    </Slider>
-    
-    <ButtonBack>Anterior</ButtonBack>
-    <ButtonNext>Siguiente</ButtonNext>
+    <div className="img-container">
+      <Slider>
+        <Slide className="img-carrousel" index={0}>
+          <img src="https://placehold.it/700x450" />
+        </Slide>
+        <Slide className="img-carrousel" tag="a" index={1}>
+          <img src="https://placehold.it/700x450" />
+        </Slide>
+        <Slide className="img-carrousel" tag="a" index={2}>
+          <img src="https://placehold.it/700x450" />
+        </Slide>
+      </Slider>
+      <ButtonBack className="button-carousel back">&#10092;</ButtonBack>
+      <ButtonNext className="button-carousel next">&#10093;</ButtonNext>
+    </div>
   </CarouselProvider>
 );
 

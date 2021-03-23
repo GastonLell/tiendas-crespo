@@ -2,26 +2,22 @@ import "./styles.css";
 
 import { useState } from "react";
 
-import { createUser } from '../../firebase/client';
+import { createUser } from "../../firebase/client";
 
 const Login = () => {
-
   const [user, setUser] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleChangueInput = (e) => {
     e.preventDefault();
-    setUser({...user,
-      [e.target.name]: e.target.value
-    })
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
   const handleSubmitForm = (e) => {
     e.preventDefault();
     createUser(user);
-    
-  }
+  };
   return (
     <div className="container-login">
       <h2>Iniciar sesión</h2>
