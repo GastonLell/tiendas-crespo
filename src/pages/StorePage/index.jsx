@@ -1,11 +1,14 @@
 import "./styles.css";
 import Carousel from "../../components/Carousel";
 import { IoLogoWhatsapp, IoLogoFacebook } from "react-icons/io";
+import { useParams } from "react-router";
+
 const StorePage = () => {
+  const { name } = useParams();
   return (
     <div className="container-tienda">
       <div className="header-tienda">
-        <h2>Nombre de la tienda</h2>
+        <h2>{name}</h2>
       </div>
 
       <div className="body-tienda">
