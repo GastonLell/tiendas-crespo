@@ -3,7 +3,7 @@ import Carousel from "../../components/Carousel";
 import { IoLogoWhatsapp, IoLogoFacebook } from "react-icons/io";
 import { useParams } from "react-router";
 
-const StorePage = () => {
+const Store = () => {
   const { name } = useParams();
   return (
     <div className="container-tienda">
@@ -23,9 +23,6 @@ const StorePage = () => {
 
         <div className="container-carousel">
           <h3 className="subtitulos">Promociones</h3>
-          {/* ver si se pueden hacer tres carruseles con distintas categorias
-              (destacados, promociones, mas vendidos)
-          */}
           <Carousel />
         </div>
 
@@ -53,4 +50,4 @@ const StorePage = () => {
     </div>
   );
 };
-export default StorePage;
+export default Store;

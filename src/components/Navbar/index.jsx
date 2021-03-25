@@ -34,7 +34,7 @@ const NavBar = () => {
             <NavLink
               className="item-nav"
               activeClassName="active-item-nav"
-              to="/servicios"
+              to="/services"
             >
               Servicios
             </NavLink>
